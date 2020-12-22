@@ -95,6 +95,8 @@ pgbadger --prefix '$LOG_LINE_PREFIX' -I $DATA_DIR/log/postgresql-$YESTERDAY.log 
 
 Example of runpgbadger.sh file is bellow. You may change which statement you want or you don't want. For instance if you don't want to see COMMIT, VACCUM, BEGIN statments, you can export them. 
 
+Following shell file generates HTML files in /var/lib/pgsql/pgbadger folder as incremental. 
+
 ```
 cat /usr/pgsql-11/bin/runpgbadger.sh
 #!/bin/bash
@@ -166,3 +168,11 @@ else
   echo
 fi
 ```
+
+Final step is that add following line into your cronjob. It'll run runpgbadger.sh file in every 01:00AM. 
+
+````
+0 1 * * * /bin/bash /usr/pgsql-11/bin/runpgbadger.sh
+````
+
+Have a nice day!
