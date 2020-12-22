@@ -4,7 +4,7 @@
 
 More information for pgBadger visit https://github.com/darold/pgbadger
 
-If there are more PostgreSQL instance on different environment that you require to monitor all SQL, I would suggest you to obtain a new apache server for only show your pgBadger reports on it.
+If there are more PostgreSQL instance on different environment that you require to monitor all SQL, I would suggest you to obtain a new apache server that it shows only your pgBadger reports on it.
 
 For instance, pgBadger allows to incremental reporting so, possible to collect daily reports and see in one page.
 
