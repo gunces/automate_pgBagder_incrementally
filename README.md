@@ -175,4 +175,8 @@ Final step is that add following line into your cronjob. It'll run runpgbadger.s
 0 1 * * * /bin/bash /usr/pgsql-11/bin/runpgbadger.sh
 ````
 
+Let's see what will you see on pgBadger main page if you continue to collect data as incremental.
+
+![](images/pgbadger_incremantal.PNG)
+
 Have a nice day!
