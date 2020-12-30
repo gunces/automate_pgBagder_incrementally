@@ -70,6 +70,12 @@ perl Makefile.PL
 make && sudo make install
 ````
 
+An example of pgBadger. More options, visit [here](https://github.com/darold/pgbadger "Darold's Github page")
+
+````
+pgbadger --prefix ' app=%a host=%r db=%d pid=%p user=%u time=%m ' -I /var/lib/pgsql/11/data/log/postgresql-Wed.log  -O /var/lib/pgsql/pgbadger -f stderr
+````
+
 ## Prepare Database Server for pgBadger
 
 Create proper folders for keeping pgBadger HTML files
